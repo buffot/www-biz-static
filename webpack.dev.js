@@ -80,5 +80,35 @@ module.exports = {
       chunks: ['index'],
       filename: 'abot.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/projects/tipiux.hbs',
+      inject: true,
+      chunks: ['index'],
+      filename: 'tipiux.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/projects/devconf.hbs',
+      inject: true,
+      chunks: ['index'],
+      filename: 'devconf.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/projects/focusboard.hbs',
+      inject: true,
+      chunks: ['index'],
+      filename: 'focusboard.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/projects/polanddeals.hbs',
+      inject: true,
+      chunks: ['index'],
+      filename: 'polanddeals.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/projects/dgtmarket.hbs',
+      inject: true,
+      chunks: ['index'],
+      filename: 'dgtmarket.html'
+    }),
   ]
 };
