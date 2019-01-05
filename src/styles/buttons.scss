@@ -1,0 +1,73 @@
+.button {
+  background: $color-light;
+  box-shadow: 24px 9px 33px -1px rgba(0,0,0,0.08);
+  color: $color-primary;
+  padding: 15px 90px;
+  border-radius: 50px;
+  font-size: 1.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: $base-transition;
+
+  &:hover {
+    background: $color-energized;
+    color: $color-light;
+  }
+}
+
+.button-small {
+  box-shadow: $base-box-shadow;
+  color: $color-energized;
+  font-size: 1em;
+  padding: 10px 50px;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-light;
+    color: $color-energized;
+  }
+}
+
+.button-icon {
+  height: 1em;
+}
+
+.button-project {
+  background: $bg-gradient;
+  box-shadow: $base-box-shadow;
+  color: $color-light;
+  font-size: 1em;
+  padding: 15px 70px;
+  display: inline-block;
+  margin-top: .7em;
+
+  &:hover {
+    background: $bg-gradient;
+    color: $color-light;
+  }
+}
+
+
+.button-project-card {
+  background: $bg-gradient;
+  box-shadow: $base-box-shadow;
+  color: $color-light;
+  font-size: 1em;
+  padding: 15px 50px;
+  position: absolute;
+  top: 30%;
+  left: 2em;
+  right: 2em;
+
+  &:hover {
+    background: $bg-gradient;
+    color: $color-light;
+  }
+}
+
+
+@media only screen and (max-width: 568px) {
+  .button {
+    font-size: 1.2em;
+  }
+}

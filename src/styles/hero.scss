@@ -1,0 +1,33 @@
+.hero {
+  background: url('../assets/hero-bg.png') no-repeat, $bg-gradient;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: top center;
+  position: relative;
+  top: -70px;
+  height: 640px;
+  width: 100%;
+}
+
+.hero-img {
+  padding-top: 10%;
+  height: 215px;
+}
+
+.hero-phone-img {
+  position: absolute;
+  top: 437px;
+  right: 78%;
+}
+
+@media only screen and (max-width: 375px) {
+  .hero {
+    top: 0;
+    height: 500px;
+    background-position: center center;
+  }
+
+  .hero-img {
+    height: 170px;
+  }
+}

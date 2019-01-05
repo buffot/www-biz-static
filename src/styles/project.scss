@@ -1,0 +1,39 @@
+.project-header {
+  // background: url('../../assets/hero-bg.png') no-repeat, $bg-gradient;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 470px;
+  width: 100%;
+  top: -60px;
+}
+
+.header-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  margin: 0 auto;
+  width: 25%;
+}
+
+.study-icon {
+  height: 70px;
+}
+
+.project-img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 414px) {
+  .project-header {
+    height: 350px;
+  }
+
+  .header-img {
+    width: 100%;
+  }
+}
