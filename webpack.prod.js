@@ -78,10 +78,16 @@ module.exports = {
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
-      template: './src/about.html',
+      template: './src/templates/projects/alterans.hbs',
       inject: true,
       chunks: ['index'],
-      filename: 'about.html'
+      filename: 'alterans.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/projects/abot.hbs',
+      inject: true,
+      chunks: ['index'],
+      filename: 'abot.html'
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
