@@ -1,9 +1,11 @@
 
-@import '~hocus-pocus/hocus-pocus';
 @import 'variables';
 @import 'buttons';
+@import '~hocus-pocus/hocus-pocus';
 @import 'project';
+@import 'hero';
 @import 'navbar';
+@import 'sections';
 @import 'utils';
 
 
@@ -12,7 +14,7 @@ html, body {
   overflow-x: hidden;
 }
 
-#app, h1, h2, h3, h4, h5, p {
+body, h1, h2, h3, h4, h5, p {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -34,4 +36,27 @@ h2 {
     top: 10px;
     position: relative;
   }
+}
+
+.services-icon {
+  height: 165px;
+}
+
+.process-no {
+  border-radius: 50%;
+  box-shadow: $base-box-shadow;
+  color: $color-energized;
+  font-size: $font-size-large;
+  margin: 0 auto;
+  height: $process-no-size;
+  width: $process-no-size;
+}
+
+.process-color-box {
+  background: $bg-gradient;
+  padding: 7em 0em 3em;
+  position: relative;
+  top: -5em;
+  z-index: -1;
+  font-weight: 400;
 }
