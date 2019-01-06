@@ -1,23 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const projects = [
-  'alterans',
-  'abot',
-  'tipiux',
-  'devconf',
-  'focusboard',
-  'polanddeals',
-  'dgtmarket',
-  'gotar',
-  'article',
-  'certace',
-  'trug',
-];
+const projects = require('./projects');
+const {prepareProjectPages} = require('./webpack-utils');
 
 module.exports = {
   entry: {
     index: './src/index.js',
-    about: './src/index.js'
   },
 
   devServer: {
@@ -29,9 +17,6 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: {
-            presets: ['env']
-        }
       },
       {
         test: /\.hbs$/,
@@ -76,76 +61,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.hbs',
+      template: `./src/index.hbs`,
       inject: true,
       chunks: ['index'],
-      filename: 'index.html',
+      filename: `index.html`,
     }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/alterans.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'alterans.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/abot.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'abot.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/tipiux.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'tipiux.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/devconf.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'devconf.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/focusboard.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'focusboard.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/polanddeals.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'polanddeals.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/dgtmarket.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'dgtmarket.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/gotar.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'gotar.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/article.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'article.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/certace.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'certace.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/projects/trug.hbs',
-      inject: true,
-      chunks: ['index'],
-      filename: 'trug.html'
-    }),
+    ...prepareProjectPages(projects),
   ]
 };

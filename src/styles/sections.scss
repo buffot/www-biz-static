@@ -11,6 +11,10 @@
     background: $color-light;
   }
 }
+.social-media-bar {
+  display: flex;
+  justify-content: center;
+}
 
 .social-media-bar a {
   transition: $base-transition;
