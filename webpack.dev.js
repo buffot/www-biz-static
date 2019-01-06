@@ -1,5 +1,18 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const projects = [
+  'alterans',
+  'abot',
+  'tipiux',
+  'devconf',
+  'focusboard',
+  'polanddeals',
+  'dgtmarket',
+  'gotar',
+  'article',
+  'certace',
+  'trug',
+];
 
 module.exports = {
   entry: {
@@ -109,6 +122,30 @@ module.exports = {
       inject: true,
       chunks: ['index'],
       filename: 'dgtmarket.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/projects/gotar.hbs',
+      inject: true,
+      chunks: ['index'],
+      filename: 'gotar.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/projects/article.hbs',
+      inject: true,
+      chunks: ['index'],
+      filename: 'article.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/projects/certace.hbs',
+      inject: true,
+      chunks: ['index'],
+      filename: 'certace.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/projects/trug.hbs',
+      inject: true,
+      chunks: ['index'],
+      filename: 'trug.html'
     }),
   ]
 };
