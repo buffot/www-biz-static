@@ -48,7 +48,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|ico)$/,
         use: [{
             loader: 'file-loader',
             options: {
@@ -61,6 +61,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      favicon: 'src/assets/favicon.ico',
       template: `./src/index.hbs`,
       inject: true,
       chunks: ['index'],
