@@ -1,1 +1,7 @@
-/dist
+/dist/*.png
+/dist/*.jpg
+/dist/*.ico
+/dist/*.html
+/dist/*.svg
+/dist/*.js
+/dist/*.css

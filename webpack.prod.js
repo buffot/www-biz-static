@@ -68,7 +68,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(buildPath),
+    new CleanWebpackPlugin(buildPath, {exclude:  ['CNAME']}),
     new HtmlWebpackPlugin({
       favicon: 'src/assets/favicon.ico',
       template: './src/index.hbs',
